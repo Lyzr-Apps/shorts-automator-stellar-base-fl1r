@@ -1,0 +1,30 @@
+{
+  "agent_name": "Thumbnail Concept Agent",
+  "agent_id": "699f76dfadf5e5d124afc1cb",
+  "description": "Thumbnail visual concept creator for YouTube Shorts that generates AI-powered thumbnail designs based on finalized scripts and topics to maximize click-through rates.",
+  "agent_type": "json",
+  "accessor": "result",
+  "auto_generated": true,
+  "response_schema": {
+    "concept_description": "string",
+    "text_overlay": "string",
+    "color_scheme": "string",
+    "emotional_trigger": "string",
+    "composition_tips": "string"
+  },
+  "example_response": {
+    "concept_description": "sample string",
+    "text_overlay": "sample string",
+    "color_scheme": "sample string",
+    "emotional_trigger": "sample string",
+    "composition_tips": "sample string"
+  },
+  "has_module_outputs": true,
+  "module_outputs_example": {
+    "artifact_files": [
+      {
+        "file_url": "https://example.com/image.png"
+      }
+    ]
+  }
+}

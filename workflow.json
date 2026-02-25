@@ -1,0 +1,101 @@
+{
+  "workflow_name": "YouTube Shorts Automation Studio",
+  "description": "Automated workflow for YouTube Shorts content creation including trend research, script writing, and thumbnail generation",
+  "nodes": [
+    {
+      "id": "input_node",
+      "type": "Input",
+      "label": "User Input",
+      "nodeCategory": "input"
+    },
+    {
+      "id": "shorts_content_coordinator",
+      "type": "Agent",
+      "label": "Shorts Content Coordinator (Manager)",
+      "nodeCategory": "agent",
+      "agent_id": "699f76cf180768b98e6c3b6c",
+      "provider": "OpenAI",
+      "model": "gpt-4.1",
+      "temperature": 0.3,
+      "top_p": 1,
+      "is_manager": true,
+      "managed_agents": [
+        "699f76adc0d92a0f4e4754dc",
+        "699f76bc1dc006ed3c885ef1"
+      ]
+    },
+    {
+      "id": "trend_research_agent",
+      "type": "Agent",
+      "label": "Trend Research Agent",
+      "nodeCategory": "agent",
+      "agent_id": "699f76adc0d92a0f4e4754dc",
+      "provider": "Perplexity",
+      "model": "sonar-pro",
+      "temperature": 0.2,
+      "top_p": 1,
+      "is_sub_agent": true,
+      "parent_agent": "699f76cf180768b98e6c3b6c"
+    },
+    {
+      "id": "script_writer_agent",
+      "type": "Agent",
+      "label": "Script Writer Agent",
+      "nodeCategory": "agent",
+      "agent_id": "699f76bc1dc006ed3c885ef1",
+      "provider": "OpenAI",
+      "model": "gpt-4.1",
+      "temperature": 0.7,
+      "top_p": 0.95,
+      "is_sub_agent": true,
+      "parent_agent": "699f76cf180768b98e6c3b6c"
+    },
+    {
+      "id": "thumbnail_concept_agent",
+      "type": "Agent",
+      "label": "Thumbnail Concept Agent",
+      "nodeCategory": "agent",
+      "agent_id": "699f76dfadf5e5d124afc1cb",
+      "provider": "Google",
+      "model": "gemini-2.5-pro",
+      "temperature": 0.6,
+      "top_p": 0.9,
+      "is_independent": true,
+      "image_output_config": {
+        "model": "dall-e-3"
+      }
+    },
+    {
+      "id": "output_node",
+      "type": "Output",
+      "label": "Final Output",
+      "nodeCategory": "end"
+    }
+  ],
+  "edges": [
+    {
+      "source": "input_node",
+      "target": "shorts_content_coordinator"
+    },
+    {
+      "source": "shorts_content_coordinator",
+      "target": "trend_research_agent"
+    },
+    {
+      "source": "shorts_content_coordinator",
+      "target": "script_writer_agent"
+    },
+    {
+      "source": "shorts_content_coordinator",
+      "target": "output_node"
+    },
+    {
+      "source": "input_node",
+      "target": "thumbnail_concept_agent"
+    },
+    {
+      "source": "thumbnail_concept_agent",
+      "target": "output_node"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "agent_name": "Thumbnail Concept Agent",
+  "agent_id": "699f76dfadf5e5d124afc1cb",
+  "agent_type": "json",
+  "accessor": "json",
+  "has_module_outputs": true,
+  "response_schema": {
+    "concept_description": "string",
+    "text_overlay": "string",
+    "color_scheme": "string",
+    "emotional_trigger": "string",
+    "composition_tips": "string"
+  }
+}

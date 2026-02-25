@@ -1,0 +1,39 @@
+{
+  "agent_name": "Shorts Content Coordinator",
+  "agent_id": "699f76cf180768b98e6c3b6c",
+  "agent_type": "json",
+  "accessor": "json",
+  "has_module_outputs": false,
+  "response_schema": {
+    "topic": "string",
+    "trend_research": {
+      "trending_topics": [
+        {
+          "topic": "string",
+          "reason": "string",
+          "popularity_score": "string"
+        }
+      ],
+      "hashtags": ["string"],
+      "competitor_angles": [
+        {
+          "angle": "string",
+          "description": "string"
+        }
+      ],
+      "audience_insights": "string"
+    },
+    "scripts": [
+      {
+        "title": "string",
+        "tone": "string",
+        "hook": "string",
+        "body": "string",
+        "cta": "string",
+        "estimated_duration": "string",
+        "word_count": "string"
+      }
+    ],
+    "content_notes": "string"
+  }
+}

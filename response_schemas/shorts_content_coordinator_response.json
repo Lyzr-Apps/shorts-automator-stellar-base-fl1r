@@ -1,0 +1,76 @@
+{
+  "agent_name": "Shorts Content Coordinator",
+  "agent_id": "699f76cf180768b98e6c3b6c",
+  "description": "Content production coordinator for YouTube Shorts that orchestrates trend research and script generation, aggregating results into a complete Shorts content package.",
+  "agent_type": "json",
+  "accessor": "result",
+  "auto_generated": true,
+  "response_schema": {
+    "topic": "string",
+    "trend_research": {
+      "trending_topics": [
+        {
+          "topic": "string",
+          "reason": "string",
+          "popularity_score": "string"
+        }
+      ],
+      "hashtags": [
+        "string"
+      ],
+      "competitor_angles": [
+        {
+          "angle": "string",
+          "description": "string"
+        }
+      ],
+      "audience_insights": "string"
+    },
+    "scripts": [
+      {
+        "title": "string",
+        "tone": "string",
+        "hook": "string",
+        "body": "string",
+        "cta": "string",
+        "estimated_duration": "string",
+        "word_count": "string"
+      }
+    ],
+    "content_notes": "string"
+  },
+  "example_response": {
+    "topic": "sample string",
+    "trend_research": {
+      "trending_topics": [
+        {
+          "topic": "sample string",
+          "reason": "sample string",
+          "popularity_score": "sample string"
+        }
+      ],
+      "hashtags": [
+        "sample string"
+      ],
+      "competitor_angles": [
+        {
+          "angle": "sample string",
+          "description": "sample string"
+        }
+      ],
+      "audience_insights": "sample string"
+    },
+    "scripts": [
+      {
+        "title": "sample string",
+        "tone": "sample string",
+        "hook": "sample string",
+        "body": "sample string",
+        "cta": "sample string",
+        "estimated_duration": "sample string",
+        "word_count": "sample string"
+      }
+    ],
+    "content_notes": "sample string"
+  }
+}

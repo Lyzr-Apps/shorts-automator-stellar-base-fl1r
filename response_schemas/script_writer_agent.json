@@ -1,0 +1,21 @@
+{
+  "agent_name": "Script Writer Agent",
+  "agent_id": "699f76bc1dc006ed3c885ef1",
+  "agent_type": "json",
+  "accessor": "json",
+  "has_module_outputs": false,
+  "response_schema": {
+    "scripts": [
+      {
+        "title": "string",
+        "tone": "string",
+        "hook": "string",
+        "body": "string",
+        "cta": "string",
+        "estimated_duration": "string",
+        "word_count": "string"
+      }
+    ],
+    "content_notes": "string"
+  }
+}
